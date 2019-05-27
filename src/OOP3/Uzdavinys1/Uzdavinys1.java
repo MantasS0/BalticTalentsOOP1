@@ -22,15 +22,52 @@ public class Uzdavinys1 {
         students[8] = new Student("Ausra", "Lapinskaite", "1A");
         students[9] = new Student("Inga", "Putpelaite", "1A");
 
+        System.out.println("Primary list of students:");
         printList(students);
+        System.out.println();
 
-        bubbleSort(students);
+        bubbleSortByName(students);
 
+        System.out.println("Sorted list of students:");
         printList(students);
 
     }
 
-    static void bubbleSort(Student array[]) {
+    static void bubbleSortByName(Student array[]) {
+        bubbleSortBySurname(array);
+
+        Student tempStudent;
+
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
+
+                if (array[j + 1].surname.equals(array[j].surname) && array[j + 1].name.compareTo(array[j].name) < 0) {
+                    tempStudent = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tempStudent;
+                }
+            }
+        }
+    }
+
+    static void bubbleSortBySurname(Student array[]) {
+        bubbleSortByClassName(array);
+
+        Student tempStudent;
+
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
+
+                if (array[j + 1].className.equals(array[j].className) && array[j + 1].surname.compareTo(array[j].surname) < 0) {
+                    tempStudent = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tempStudent;
+                }
+            }
+        }
+    }
+
+    static void bubbleSortByClassName(Student array[]) {
         Student tempStudent;
 
         for (int i = 0; i < array.length - 1; i++) {
@@ -43,32 +80,6 @@ public class Uzdavinys1 {
             }
         }
     }
-
-/*
-    static void bubbleSort(Student array[]) {
-        int temp;
-        boolean swapped;
-        for (int i = 0; i < array.length - 1; i++) {
-            swapped = false;
-            for (int j = 0; j < array.length - i - 1; j++) {
-                String firstArray = array[j].className;
-                if (array[j] > array[j + 1]) {
-                    // swap arr[j] and arr[j+1]
-                    temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                    swapped = true;
-                }
-            }
-
-            // IF no two elements were
-            // swapped by inner loop, then break
-            if (swapped == false)
-                break;
-        }
-
-    }
-*/
 
     static void printList(Student[] students) {
         int i = 1;
