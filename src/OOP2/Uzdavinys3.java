@@ -15,7 +15,7 @@ public class Uzdavinys3 {
         int pow;
 
         while (true) {
-        System.out.print("Iveskite sveika skaiciu: ");
+            System.out.print("Iveskite sveika skaiciu: ");
             if (input.hasNextInt()) {
                 number = input.nextInt();
                 input.nextLine();
@@ -27,7 +27,7 @@ public class Uzdavinys3 {
         }
 
         while (true) {
-        System.out.print("Iveskite laipsni (sveika skaiciu): ");
+            System.out.print("Iveskite laipsni (sveika skaiciu): ");
             if (input.hasNextInt()) {
                 pow = input.nextInt();
                 input.nextLine();
@@ -44,7 +44,7 @@ public class Uzdavinys3 {
         for (int i = 1; i < pow; i++) {
             result *= number;
         }
-        System.out.printf("%d pakeltas %d laipsniu yra: %d", number,pow,result);
+        System.out.printf("%d pakeltas %d laipsniu yra: %d", number, pow, result);
 
     }
 }

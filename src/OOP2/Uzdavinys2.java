@@ -8,7 +8,7 @@ public class Uzdavinys2 {
          */
         System.out.println("Perfect numbers are:");
 
-        for (int i = 1; i <= 1000; i++) {
+        for (int i = 1; i <= 10000; i++) {
             if (isPerfectNumber(i)){
                 System.out.print(i + " ");
             }
@@ -25,10 +25,7 @@ public class Uzdavinys2 {
         }
 //        System.out.println("Number: " + number + "\n" +
 //                "Dividable sum: " + dividablesSum);
-        if (number == dividablesSum) {
-            return true;
-        }
-        return false;
+        return number == dividablesSum;
     }
 
 }
