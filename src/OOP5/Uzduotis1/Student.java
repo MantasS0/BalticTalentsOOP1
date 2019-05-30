@@ -63,9 +63,10 @@ public class Student extends Person {
     }
 
     public static ArrayList<String> getClassNames() {
+//        System.out.println(Student.students.length);
         ArrayList<String> classNames = new ArrayList<String>();
         for (int i = 0; i < Student.students.length; i++) {
-            for (String name : classNames) {
+            for (Student name : Student.students) {
                 if (!Arrays.asList(Student.students[i].className).contains(name)) {
                     classNames.add(Student.students[i].className);
                     System.out.println("New Class " + Student.students[i].getClassName() + " is detected");

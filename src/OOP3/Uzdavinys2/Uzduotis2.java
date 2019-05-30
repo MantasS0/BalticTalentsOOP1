@@ -9,7 +9,7 @@ public class Uzduotis2 {
         System.out.printf("Triangle 1 perimeter is: %d\n" +
                 "Area is: %d\n", triangle1.perimeter(), triangle1.area());
 
-        System.out.printf("Rectangle 1 perimeter is: %d\n" +
+        System.out.printf("Square 1 perimeter is: %d\n" +
                 "Area is: %d\n", rectangle1.perimeter(), rectangle1.area());
 
         System.out.printf("Circle 1 perimeter is: %d\n" +
