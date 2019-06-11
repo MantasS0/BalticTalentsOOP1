@@ -43,7 +43,7 @@ public class Person {
     }
 
     public static void insertToPeopleMap(Person person) {
-        if (Person.people.get(person.citizenCode) == null) {
+        if (Person.people.get(person.citizenCode) == null) {  // galima buvo - if(Person.people.containsKey(person.citizenCode))
             List<Person> personList = new ArrayList<>();
             personList.add(person);
             Person.people.put(person.citizenCode,personList);
